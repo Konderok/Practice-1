@@ -185,4 +185,240 @@
 // const test = '12.2px';
 // // console.log(parseInt(test));
 // console.log(parseFloat(test));
+// Урок 19
+// function first() {
+//     //do something
+//     setTimeout(function() {
+//         console.log(1);
+//     }, 500);
+// }
 
+// function second() {
+//     console.log(2);
+// }
+
+// first();
+// second();
+
+// function learnJS(lang, callback) {
+//     console.log(`Я учу: ${lang}`);
+//     callback();
+// }
+
+// function Done() {
+//     console.log('Я прошёл этот урок');
+// }
+
+// learnJS('JavaScript', Done);
+// урок 20
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         background: 'red'
+//     },
+//     makeTest: function() {
+//         console.log('Test');
+//     }
+// };
+// options.makeTest();
+
+// console.log(Object.keys(options).length);
+
+// const Maxim = {
+//     SecondName: 'Ivanov',
+//     Old: 16,
+//     Height: 186
+// };
+
+// console.log(Object.keys(Maxim));
+
+// const {border, background} = options.colors;
+// console.log(border);
+
+// console.log(options['colors']['border'])
+
+// console.log(options.name);
+
+// delete options.name;
+
+// console.log(options)
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof(options[key]) == 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`)
+//             counter++;
+//         }
+//     } else {
+//             console.log(`Свойство ${key} имеет значение ${options[key]}`)
+//             counter++;
+//       }
+// }
+// console.log(counter);
+
+// урок 21
+
+// const arr = [1, 12, 23, 7, 9, 10];
+
+// arr.sort(compareNum);
+// console.log(arr);
+
+// function compareNum(a, b) {
+//     return a - b;
+// }
+
+// arr[99] = 0;
+// console.log(arr.length);
+// console.log(arr);
+
+// arr.forEach(function(item, i, arr) {
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+
+// arr.pop();
+// arr.push(11);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value); 
+// }
+
+// const str = prompt('', '');
+// const products = str.split(', ');
+// products.sort();
+// console.log(products.join('; '));
+
+
+//урок 22
+// let a = 5,
+//     b = a;
+
+// b = b + 5;
+
+// console.log(b);
+// console.log(a);
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj; //ссылка
+
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+// function copy(mainObj) {
+//     let = objCopy = {}
+    
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+    
+//     return objCopy;
+// }
+
+// const numbers = {
+//     a: 5,
+//     c: 4,
+//     b: {
+//         x:5,
+//         y:2
+//     }
+// };
+
+// const NewNumbers = copy(numbers);
+
+// NewNumbers.a = 12;
+// NewNumbers.b.x = 10;
+
+// console.log(NewNumbers);
+// console.log(numbers);
+
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+
+// const clone = Object.assign({}, add);
+
+// clone.d = 20;
+
+// console.log(add);
+// console.log(clone);
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+
+// newArray[1] = 'addaadadad';
+// console.log(newArray);
+// console.log(oldArray);  
+
+// const video = ['YouTube', 'Vimeo', 'rutube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'facebook'];
+
+// console.log(internet);
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+// const num = [2, 5, 1];
+
+// log(...num);
+
+// const array = ['a', 'b'];
+
+// const newAarray = [...array];
+
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+
+// const NewObj = {...q};
+
+//урок 23
+
+// let str = 'some';
+// let strObj = new String(str); 
+
+// console.log(typeof(str));
+// console.log(typeof(strObj));
+
+// console.dir([1,2,3]);
+
+// const soldier = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function() {
+//         console.log('Hello');
+//     }
+// };
+
+// const Jonh = Object.create(soldier);
+
+// const Jonh = {
+//     health: 100
+// };
+
+// Jonh.__proto__ = soldier;
+
+// Object.setPrototypeOf(Jonh, soldier);
+
+// console.log(Jonh.armor);
+// Jonh.sayHello();
